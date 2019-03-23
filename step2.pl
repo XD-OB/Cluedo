@@ -1,16 +1,25 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                       EINSTEIN RIDDLE                                        %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 droite_de(X, Y, [Y,X|_]).
 droite_de(X, Y, [_|R]) :- droite_de(X, Y, R).
 gauche_de(X , Y, [X,Y|_]).
 gauche_de(X , Y, [_|R]) :- gauche_de(X, Y, R).
 cote_de(X, Y, Z) :- droite_de(X, Y, Z); gauche_de(X, Y, Z).
 
-/*  */
+/*  Position, Couleur, Nationalite, Animal, Boisson, Cigare  */
 
-enigme(Maisons) :- Maisons = [[1, _, _, _, _, _],
-			[2, _, _, _, _, _],
-			[3, _, _, _, _, _],
-			[4, _, _, _, _, _],
-			[5, _, _, _, _, _]],
+maisons([	[1, _, _, _, _, _],
+		[2, _, _, _, _, _],
+		[3, _, _, _, _, _],
+		[4, _, _, _, _, _],
+		[5, _, _, _, _, _]
+	]).
+
+enigme(Maisons) :- maisons(Maisons),
 		member([_, rouge, anglais, _, _, _], Maisons),
 		member([_, _, suedois, chiens, _, _], Maisons),
 		member([_, _, danois, _, the, _], Maisons),
