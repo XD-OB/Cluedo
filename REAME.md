@@ -2,5 +2,3 @@ This rush aims to introduce you to logical programming with Prolog.
 Logic programming is a declarative programming style : the program describes factsand rules, and leaves the problem’s resolution to the interpreter’s care.
 A Prolog program completely removes the procedure to solve the problem, it is con-tent to describe what is true, and the inference engine resolves the queries by confrontingthem to the knowledge base. For this reason, a Prolog program is often much shorterthan a procedural program solving the same problem.This rush is progressive.
 First, you need to work on a little exercise to understandthe syntax of the language. Then you have a classic puzzle to solve. And finally comesthe part really playful : the resolution of a riddle a little touffue !You will find that the code to be rendered each time is ultimately not very long, it is “enough” (certainly easier to say than to do!) to understand what is happening. Yourwork in pairs will therefore be mainly a work of understanding and sharing of knowledge.
-
-#team: obelouch:zamazzal
