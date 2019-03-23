@@ -35,7 +35,7 @@ liste_des_sportifs([
 		[_, _, _]
 	]).
 
-enigme(SPORTIFS) :- liste_des_sportifs(SPORTIFS),
+enigme_sport(SPORTIFS) :- liste_des_sportifs(SPORTIFS),
 	member([_, _, visite], SPORTIFS),
 	member([_, _, certificat], SPORTIFS),
 	member([_, _, renouvlement], SPORTIFS),
@@ -59,6 +59,6 @@ affiche([]) :- !.
 affiche([H|T]) :- writeln(H),
 	affiche(T).
 
-affichez_l_ordre :- enigme(S), nl,
+affichez_l_ordre :- enigme_sport(S), nl,
 		writeln("-----------Solution------------"),
 		affiche(S).

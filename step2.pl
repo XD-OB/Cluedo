@@ -19,7 +19,7 @@ maisons([	[1, _, _, _, _, _],
 		[5, _, _, _, _, _]
 	]).
 
-enigme(Maisons) :- maisons(Maisons),
+enigme_maisons(Maisons) :- maisons(Maisons),
 		member([_, rouge, anglais, _, _, _], Maisons),
 		member([_, _, suedois, chiens, _, _], Maisons),
 		member([_, _, danois, _, the, _], Maisons),
@@ -36,4 +36,4 @@ enigme(Maisons) :- maisons(Maisons),
 		member([2, bleue, _, _, _, _], Maisons),
 		cote_de([_, _, _, _, _, blend], [_, _, _, _, eau, _], Maisons).
 
-qui_a_le_poisson(X) :- enigme(Maisons), member([_, _, X, poisson, _, _], Maisons).
+qui_a_le_poisson(X) :- enigme_maisons(Maisons), member([_, _, X, poisson, _, _], Maisons), !.
