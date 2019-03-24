@@ -27,9 +27,10 @@ enfant_de(E, P) :- member((E, P), [
 			(valerie, loic), (valerie, eve)
 			]).
 
-beaupere_de(X, Z) :- enfant_de(Z, X), homme(X).
-
-bellemere_de(Y, Z) :- enfant_de(Z, Y), femme(Y).
+beaupere_de(X, Z) :- homme(Z), homme(X), femme_de(Y, Z), enfant_de(Y, X), !.
+beaupere_de(X, Z) :- femme(Z), homme(X), mari_de(Y, Z), enfant_de(Y, X).
+bellemere_de(X, Z) :- homme(Z), femme(X), femme_de(Y, Z), enfant_de(Y, X), !.
+bellemere_de(X, Z) :- femme(Z), femme(X), mari_de(Y, Z), enfant_de(Y, X).
 
 ancetre_de(X, Z) :- enfant_de(Z, X).
 ancetre_de(X, Z) :- enfant_de(Z, Y),
