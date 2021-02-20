@@ -1,9 +1,9 @@
 # Cluedo
 
 ## Subject
-![subject_fr]('/ressources/cluedo.pdf')
+![subject_fr](/ressources/cluedo.pdf)
 
-![subjet_eng]('/ressources/cluedo.eng.pdf')
+![subjet_eng](/ressources/cluedo.eng.pdf)
 
 This rush aims to introduce you to logical programming with Prolog.
 
@@ -13,7 +13,7 @@ A Prolog program completely removes the procedure to solve the problem, it is co
 
 This rush is progressive, and challenging you will have to solve some tough riddles using this programming language!
 
-![screenshot]('/ressources/prolog.png')
+![screenshot](/ressources/prolog.png)
 
 ## Owner
 - Oussama Belouche 1337
